@@ -10,7 +10,7 @@ A desktop application which can test user typing speed.
 The "correct" and "incorrect" sets I drew in the chart were actually implemented at the end, when the time is up.
 
 ![screenshot](screenshot.png)
-![flowchart](TypingSpeedTest.svg)
+![flowchart](TypingSpeedTest.png)
 
 ### Reference
 
