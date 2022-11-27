@@ -8,8 +8,10 @@ INCORRECT = "incorrect"
 
 # Read source file
 with open("source.txt", "r") as file:
+    # readlines would have '\n' character at the end of line
     source_file = file.readlines()
-    all_chars = source_file[0]
+    all_chars = source_file[0].strip('\n')
+    wiki_link = source_file[1]
     all_words = all_chars.split(" ")
 
 
@@ -106,7 +108,7 @@ lb_result = Label(root, font=("Courier New", 18, "normal"), text=f"Your typing s
 lb_result.grid(row=0, column=1)
 
 # Display article source
-lb_description = Label(root, font=("Verdana", 14, "normal"), text=f"Article source: {source_file[1]}", padx=10, pady=5)
+lb_description = Label(root, font=("Verdana", 14, "normal"), text=f"Article source: {wiki_link}", padx=10, pady=5)
 lb_description.grid(row=1, column=0, columnspan=2, sticky="w")
 
 # Display source, highlight bg color :#DAE5D0
